@@ -1,4 +1,4 @@
-# VCTK — Vibe Coding Toolkit v0.2.0
+# VCTK — Vibe Coding Toolkit v0.2.1
 
 A skills-first workflow toolkit for Claude Code. Structures feature development into four gated phases with supporting quality tools, session management, and project templates.
 
@@ -12,6 +12,8 @@ commands/                ← Thin /slash-command stubs (backward compat)
 project-templates/       ← Parameterized templates for project-specific skills
 memory/                  ← Memory scaffolding templates
 ```
+
+> **Important**: Claude Code discovers project-local skills at `.claude/skills/<skill-name>/SKILL.md` (depth 1 only). Skills must be installed flat — not nested under a subdirectory. The installer handles this correctly.
 
 ## Core Workflow
 
@@ -43,8 +45,9 @@ Each phase is **gated** — Phase N requires output from Phase N-1.
 
 | Skill | Trigger | What It Does |
 |-------|---------|-------------|
+| `toolkit-install` | "install toolkit", "setup toolkit", "update vctk" | Installs or updates VCTK into the current project's `.claude/` directory |
 | `vctk-init` | "check vctk setup", "preflight check" | Verifies installation and project readiness |
-| `vctk-update` | "update vctk", "upgrade toolkit" | Updates to latest version |
+| `vctk-update` | "update vctk", "upgrade toolkit" | Updates to latest version from remote |
 | `vctk-sync-docs` | "sync docs", "document the codebase" | Generates/updates .agent documentation |
 
 ## Installation
@@ -68,7 +71,15 @@ cd claude-coding-toolkit
 ./install.sh
 ```
 
-The installer presents an interactive menu — select exactly the components you need.
+The installer copies all skills flat into `.claude/skills/<skill-name>/` so Claude Code can discover them correctly.
+
+### Project-local install via `toolkit-install` skill
+
+Once `toolkit-install` is installed as a global skill (`~/.claude/skills/toolkit-install/`), you can install VCTK into any project by opening Claude Code in that project directory and saying:
+
+> "install toolkit" or "setup vctk"
+
+The skill detects the current working directory and installs all VCTK skills into `<project>/.claude/skills/`.
 
 ## Project Templates
 
