@@ -1,6 +1,12 @@
 ---
 name: review-code
-description: Audit implementation against technical spec with confidence-based scoring. Phase 4 of the vibe-coding workflow. Use when implementation needs review, user says "review this" or "check the code". GATE requires spec and files. Reports findings with confidence scores (0-100, threshold 80) for human decision. Works without git.
+user-invocable: true
+description: Audits implementation against technical spec with confidence-based scoring. Use when user says 'review this', 'check the code', 'audit my changes', 'is this correct', or implementation needs verification. GATE requires spec and files. Reports findings with confidence scores for human decision.
+metadata:
+  author: Sprayer115
+  version: "0.2.0"
+  category: workflow
+  tags: [vctk, dev-workflow]
 ---
 
 # Code Review Audit

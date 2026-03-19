@@ -1,6 +1,12 @@
 ---
 name: implement-feature
-description: Execute implementation of an approved technical spec with strict constraint adherence. Phase 3 of the vibe-coding workflow. Use when spec is approved, user says "build this" or "implement the spec". GATE requires approved spec. Executes exactly what spec says, no creativity or scope expansion.
+user-invocable: true
+description: Executes implementation of an approved technical spec with strict constraint adherence. Use when user says 'build this', 'implement the spec', 'start coding', 'let\'s build', or has an approved spec ready. GATE requires approved spec. No creativity or scope expansion.
+metadata:
+  author: Sprayer115
+  version: "0.2.0"
+  category: workflow
+  tags: [vctk, dev-workflow]
 ---
 
 # Feature Implementation

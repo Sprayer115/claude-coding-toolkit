@@ -1,6 +1,12 @@
 ---
 name: technical-spec
-description: Create technical specifications by researching codebase patterns and gathering architecture decisions. Phase 2 of the vibe-coding workflow. Use when feature brief needs technical design, user says "design this feature", or need architecture decisions. GATE requires approved feature brief. Presents options, does NOT decide.
+user-invocable: true
+description: Researches codebase patterns and creates a technical specification with architecture options. Use when user says 'design this feature', 'create a spec', 'technical design', 'how should we build', or has an approved feature brief needing architecture decisions. GATE requires approved feature brief. Outputs a SPEC file.
+metadata:
+  author: Sprayer115
+  version: "0.2.0"
+  category: workflow
+  tags: [vctk, dev-workflow]
 ---
 
 # Technical Spec Creation

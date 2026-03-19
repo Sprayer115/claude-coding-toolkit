@@ -1,6 +1,12 @@
 ---
 name: feature-brief
-description: Extract complete feature requirements through structured interviewing. Phase 1 of the vibe-coding workflow. Use when starting a new feature, user has a feature idea, user says "I want to build...", or need requirements before technical design. Conducts interview with probing questions, challenges vague answers.
+user-invocable: true
+description: Conducts a structured multi-phase interview to extract feature requirements and produce a BRIEF.md. Use when user says 'new feature', 'I want to build', 'start a feature', 'requirements for', 'let's define', or initiates a feature discussion. Outputs a gated BRIEF file required for the design phase.
+metadata:
+  author: Sprayer115
+  version: "0.2.0"
+  category: workflow
+  tags: [vctk, dev-workflow]
 ---
 
 # Feature Brief Interview
